@@ -1,10 +1,43 @@
-$body-bg: #f0f0f0;
+/* Fixed Size */
+$windowHeight: 720px;
+$windowWidth: 1280px;
+
+/* Base Colors */
+$bodyBg: #f0f0f0;
+$radialBg: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(255,255,255,1) 0%, rgba(0, 0, 0, 0.15) 100%);
 $tcp: #333;
 
+html {
+    font-size: .625em;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
 body {
-    background: $body-bg;
+    background: $radialBg;
+    width: $windowWidth;
+    height: $windowHeight;
+    overflow: hidden;
+    font-size: 1.6em;
 }
 
 .AppContainer {
     color: $tcp;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1 {
+        font-size: 4.8rem;
+
+        span {
+            color: rgba(52, 152, 219,1)
+        }
+    }
 }
